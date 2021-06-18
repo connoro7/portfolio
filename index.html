@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://www.connordillon.dev/assets/favicon.17e50649.svg" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://kit.fontawesome.com/31c4c94932.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    
+    <script type="text/javascript">
+      (() => {
+          // https://dashboard.emailjs.com/admin/integration
+          emailjs.init("user_zQhtsGsVgjvTPh7vBRIha")
+      })()
+  </script>
+
+  <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+              emailjs.sendForm('service_lpdmu6r', 'template_3ksmphs', this)
+                  .then((res) => {
+                      console.log('SUCCESS!', res.status, res.text);
+                  }, (error) => {
+                      console.error('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connor Dillon</title>
+  <script type="module" crossorigin src="https://www.connordillon.dev/assets/index.7873de58.js"></script>
+  <link rel="modulepreload" href="https://www.connordillon.dev/assets/vendor.1f65708c.js">
+  <link rel="stylesheet" href="https://www.connordillon.dev/assets/index.1f399576.css">
+</head>
+  <body>
+    <canvas id="bg"></canvas>
+    
+    <main>
+
+      <header>
+        <h1>Connor Dillon</h1>
+        <p>Physicist. Software Engineer.</p>
+        <div class="links">
+          <a href="mailto:connor@connordillon.dev" target="_blank"> <i class="fas fa-at"></i></a>          
+          <a href="https://www.linkedin.com/in/connor-dillon" target="_blank"><i class="fab fa-linkedin-in"></i></a>          
+          <a href="https://www.github.com/connoro7" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://dev.to/connoro7" target="_blank"><i class="fab fa-dev"></i></a>
+        </div> 
+      </header>
+
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          Connor is a software engineer with a career focus in full-stack development. He is currently based out of Seattle, Washington. Connor has a background in astrophysics and physics education at the University of Washington, where he graduated from with a B.Sc. in Physics in 2017. Since then, Connor has gone on to forge his path as a systems engineer in the realm of business and brand development, as well as in online sales and marketing. He has a deep intuition for building strong connections with others, and has a great deal of experience building, managing, and working with teams from across the globe.</p>
+          <p>
+          Connor is fueled by his passion for understanding the dynamics and mechanisms of the world around him, always eager to learn and entertain his curiosity. He is compelled to systematize the processes and structures around him, and is always willing to take on the most ambitious of challenges. Connor thrives in team environments, loves working with others, and always takes great pride in his work.
+        </p>
+
+        <p><em>"Connor is passionate about diving into the world of software engineering. He shows a consistent mix of curiosity and excitement and has an insatiable desire to learn and grow. He's very organized and brings a communicative and collaborative presence to the projects he works on."</em>
+          <b> - Keegan Farley, Software Engineer II, Axon Enterprise</b>
+          </p>
+      </section>
+
+      <section class="tech">
+        <h2>Software Technologies</h2>
+        <div class="tech-container">
+          <div><i class="icon-javascript-alt"></i><p>Javascript</p></div>
+          <div><i class="icon-reactjs"></i><p>React</p></div>
+          <div><i class="icon-nodejs"></i><p>Node.js</p></div>
+          <div><i class="icon-html5-alt"></i><p>HTML</p></div>
+          <div><i class="icon-css3-alt"></i><p>CSS</p></div>
+          <div><i class="icon-sass"></i><p>Sass</p></div>
+          <div><i class="icon-mongodb"></i><p>MongoDB</p></div>
+          <div><i class="icon-git"></i><p>Git</p></div>
+          <div><i class="icon-shell"></i><p>Shell</p></div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <h2>Software Portfolio</h2>
+        <div class="portfolio-container">
+          <div class="portfolio-item">
+          <h3>Exportdefault.shop</h3>
+          <small><em>(React, Redux, MongoDB, Express.js, Node.js)</em></small>
+          <div class="btn-group"></div>
+          <a href="https://exportdefault.shop"><button class="btn btn-small">Demo</button></a>
+          <a href="https://github.com/connoro7/exportdefault.shop" target="_blank"><button class="btn btn-small">Github</button></a>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Norikomu</h3>  
+            <small><em>(Javascript, Axios, Cheerio.js, HTML, SCSS)</em></small>
+            <div class="btn-group">
+              <a href="https://github.com/connoro7/norikomu" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Ezl.ink</h3>  
+            <small><em>(Javascript, VueJS, Node.js, MongoDB, Express.js, HTML, SCSS)</em></small>
+            <div class="btn-group">
+              <a href="https://www.ezl.ink" target="_blank"><button class="btn btn-small">Demo</button></a>
+              <a href="https://github.com/connoro7/shorts.sh" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Playlist Explorer for Spotify</h3>  
+            <small><em>(React, Javascript, Typescript, Node.js, MongoDB, Express.js, HTML, CSS)</em></small>
+            <div class="btn-group">
+              <a href="https://github.com/keego/playlist-explorer-for-spotify" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>RTST - Real Time Stock Ticker</h3>  
+            <small><em>(React, Node, Protobuf.js, Websockets)</em></small>
+            <div class="btn-group">
+              <a href="https://github.com/connoro7/rtst" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Babel-Webpack Build Kit</h3>  
+            <small><em>(Javascript, Node.js, Babel, Webpack)</em></small>
+            <div class="btn-group">
+              <a href="https://github.com/connoro7/babel-webpack-builder" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <h3>Blockchain Architecture</h3>  
+            <small><em>(Typescript, Node.js)</em></small>
+            <div class="btn-group">
+              <a href="https://github.com/connoro7/blockchain-architecture" target="_blank"><button class="btn btn-small">Github</button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="experience">
+        <h2>Work Experience</h2>
+        <h3>Full-Stack Web Developer</h3>
+        <p>Freelance, 2019 - Present</p>
+        <h3>Systems and Operations Developer</h3>
+        <p>SubtlEdge LLC, 2017 - Present</p>
+        <h3>Physics Education Group Collaborator, Lead Teaching Assistant</h3>
+        <p>University of Washington, 2017 - 2017</p>
+        <button type="button" id="review-btn" class="btn btn-small">Reviews</button>
+        <div id="ta-reviews" style="display: none">
+          <p><em>"I have been fortunate to have three great TA's for my tutorial sections through 121 to 123, but Connor was the best TA I've had. He could answer any question, and made key concepts really clear. He's the reason I had to pretty great tutorial free response scores in comparison to the rest of the test, he was really good and effective at teaching the matter, and I applaud him for that."</em></p>
+          <p><em>"Connor's explanations made it easier to grasp harder concepts. The high level of knowledge that [Connor] possesses has made asking questions and understanding confusing material much easier."</em></p>
+          <p><em>"Connor was the best, and he should continue being exactly the same because he was a better teacher than our professor."</em></p>
+          <p><em>"The tutorials were by far the best out of 121, 122, and 123. Not sure if this was just because I was more interested, because Connor was a really awesome TA, or because they were just better. but this was my favorite class of the week. I knew I was going to learn and stretch my thinking and ask questions and get answers."</em></p>
+          <p><em>"Connor the TA and his assistant TA contributed the most to my learning. Also I had a great group to work with. Explanations were always great."</em></p>
+          <p><em>"Good explanations by the course instructors."</em></p>
+          <p><em>"Connor was an amazing TA, very easy to talk to, and good at explaining things."</em></p>
+        </div>
+      </section>
+
+      <section class="achievements">
+        <h2>Achievements</h2>
+        <h3>"1UX" System</h3>
+        <p>Developed modular Agile-based systems for the implementation of product manufacturing, logistics solutions, brand content, copywriting, product images, packaging, product inserts, marketing and advertising campaigns, and product launches.</p>
+        <h3>Project Waterfall</h3>
+        <p>Deployed processes for time- and cost-efficient content generation of brand and product-specific content, as well as for audience research, copywriting, and product images required for rapid product launches.</p>
+        <h3>AIOS Protocol</h3>
+        <p>Constructed system of SOPs, metrics, and KPIs for the assessment, investment, optimization, and sale of company-owned brands.</p>
+        <h3>Impulse Media Labs</h3>
+        <p>Systematized the vendor and B2C facing edges of the SubtlEdge product launch system as a service to other 3rd-Party FBA and FBM merchants.</p>
+      </section>
+
+      <section class="education">
+        <h2>Education & Research</h2>  
+        <h3>
+          B.A.Sc in Physics, Minor in Mathematics (2017)
+        </h3>
+        <h4>
+          University of Washington, Seattle
+        </h4>
+        <br>
+          <a href="/docs/SpacetimeTopology.pdf" target="_blank"><h3><i class="fas fa-file-pdf"></i>Topology of Spacetime</h3></a>
+              <p> Over very large length scales on the order of 300 million light years or so, the matter and energy that make up the universe take on a nearly-homogeneous isotopic distribution. As the observational scale decreases, a hierarchy of matter and energy distribution emerges first within galactic filaments, then superclusters, clusters, and so on moving down to atoms and elementary particles. On the largest of scales, the geometry of the local (observable) universe and beyond (global universe) remains yet unsolved. Observational evidence supports that global spacetime has zero curvature, is unbounded, and is infinite with a 0.4% margin of error. The experimental error with current data is large enough however that the sign on the curvature cannot be constrained, which only permits spacetime to be approximated as Euclidean.</p>
+          <br>
+          <a href="/docs/BlackholeThermodynamics.pdf" target="_blank"><h3><i class="fas fa-file-pdf"></i>Black Hole Thermodynamics </h3></a>
+            <p>Despite the seemingly impossible task of looking at a black hole experimentally, the thermo-dynamics of black holes is still a active field of theoretical study. In an effort to reconcile our current understanding of the nature of black holes with the laws of thermodynamics, we encounter black hole entropy as a consequence of the preservation of said laws. By postulating that a black hole must have entropy, we are able to develop four laws that describe the specific nature of the thermodynamics of black holes. Furthermore, we can examine black holes over both finite and infinite amounts of time in such a way that we can investigate how black holes behave as potential heat engines.</p>
+          <br>
+          <a href="/docs/ProbingForDarkMatterGravitationalWaves.pdf" target="_blank"><h3><i class="fas fa-file-pdf"></i>Probing for Dark Matter Using Gravitational Wave Interferometry</h3></a>
+            <p>With the recent detection of gravitational waves by Advanced LIGO (aLIGO), new limits have been set on the merging densities and rates of a predicted source of dark matter known as primordial black holes. Primordial black holes (PBHs) are a theoretical class of black hole that would have formed under the extreme conditions and high matter densities of the early universe rather than the core-collapse of a high-mass star or other processes associated with later evolutionary periods of the universe. PBHs have been hypothesized to partially or completely explain dark matter clusters and are also thought to be potential sources of gravitational waves. Here, I explore the possibility that PBH dark matter has been detected by aLIGO, and how future searches for gravitational waves (GW) by aLIGO and related classes of GW interferometers can be used to probe the large-scale distribution of PBH dark matter clusters within the universe.</p>
+      </section>
+
+      <blockquote class="contact-container">
+        <section >
+          <h2>Contact Me</h2>
+          <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <fieldset>
+              <label>Name</label>
+              <input type="text" name="from_name" id="form-name" required>
+            </fieldset>
+            <fieldset>
+              <label>Email</label>
+              <input type="email" name="reply_to" id="form-email" required>
+            </fieldset>
+            <fieldset>
+              <label>Message</label>
+              <textarea name="message" id="form-message" required ></textarea>
+            </fieldset>
+
+            <fieldset>
+              <input type="submit" value="Send" id="submit-btn" class="btn">
+            </fieldset>
+
+            <div class="g-recaptcha" data-sitekey="6LeHZCUbAAAAAH-cMpZARiqP9FzGpIqsXC1Z-7HI" data-theme="dark"></div>
+            <div class="recaptcha-disclaimer">This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+              <a href="https://policies.google.com/terms">Terms of Service</a> apply.</div>
+        </form>
+        </section>
+      </blockquote>
+
+      <footer>
+        <div class="copyright"><p>Copyright 2021 &copy; Connor Dillon. All Rights Reserved. Built by hand and with <i class="fas fa-heart" style="color:red"></i> by Connor Dillon.</p>
+        </div>
+        <div class="links"><a href = "mailto:connor@connordillon.dev" target="_blank"><i class="fas fa-at"></i>Email Me</a>
+        <a href="https://www.linkedin.com/in/connor-dillon" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+        <a href="https://www.github.com/connoro7" target="_blank"> <i class="fab fa-github"></i>Github</a>
+        <a href="https://dev.to/connoro7" target="_blank"><i class="fab fa-dev"></i>Dev.to</a></div>
+      </footer>
+
+    </main>
+    
+  </body>
+</html>
