@@ -12,8 +12,14 @@
     
     <script type="text/javascript">
       (() => {
-          // https://dashboard.emailjs.com/admin/integration
+        try {
           emailjs.init("user_zQhtsGsVgjvTPh7vBRIha")
+          console.log('emailjs init success')
+        } catch (error) {
+          console.log(error);
+        }
+          // https://dashboard.emailjs.com/admin/integration
+          
       })()
   </script>
 
@@ -21,6 +27,7 @@
       window.onload = function() {
         document.getElementById('contact-form').addEventListener('submit', function(event) {
           event.preventDefault();
+          console.log('form init success');
               emailjs.sendForm('service_lpdmu6r', 'template_3ksmphs', this)
                   .then((res) => {
                       console.log('SUCCESS!', res.status, res.text);
@@ -33,8 +40,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connor Dillon</title>
-  <script type="module" crossorigin src="/assets/index.053908c3.js"></script>
-  <link rel="modulepreload" href="/assets/vendor.3ff15be3.js">
+  <script type="module" crossorigin src="/assets/index.9ecb93fd.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.3f7d79df.js">
   <link rel="stylesheet" href="/assets/index.1f399576.css">
 </head>
   <body>
