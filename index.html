@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/31c4c94932.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     
@@ -17,29 +17,32 @@
       (() => {
         try {
           emailjs.init("user_zQhtsGsVgjvTPh7vBRIha")
-          console.log('emailjs init success')
         } catch (error) {
           console.log(error);
         }
       })()
   </script>
   <script type="text/javascript">
-      window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+      window.onload =  function() {
+        document.getElementById('contact-form').addEventListener('submit', 
+        // async 
+        function(event) {
           event.preventDefault();
-          console.log('form init success');
-              emailjs.sendForm('service_lpdmu6r', 'template_3ksmphs', this)
+          // const recaptchaInjection = await recaptchaResponseInjector().then(
+            emailjs.sendForm('service_lpdmu6r', 'template_3ksmphs', this)
                   .then((res) => {
                       console.log('SUCCESS!', res.status, res.text);
                   }, (error) => {
+                    console.log(this);
                       console.error('FAILED...', error);
-                  });
+                  })
+                  // )
           });
       }
   </script>
-  <script type="module" crossorigin src="./assets/index.a0c1831a.js"></script>
+  <script type="module" crossorigin src="./assets/index.6006f0eb.js"></script>
   <link rel="modulepreload" href="./assets/vendor.3f7d79df.js">
-  <link rel="stylesheet" href="./assets/index.6aadb854.css">
+  <link rel="stylesheet" href="./assets/index.88b374a8.css">
 </head>
   <body>
     <canvas id="bg"></canvas>    
@@ -237,30 +240,23 @@
       <blockquote class="contact-container">
         <section>
           <h2>Contact Me</h2>
-          <form id="contact-form">
+          <form id="contact-form" method="post">
             <input type="hidden" name="contact_number">
-            <fieldset>
-              <label>Name</label>
-              <input type="text" name="from_name" id="form-name" required>
-            </fieldset>
-            <fieldset>
-              <label>Email</label>
-              <input type="email" name="reply_to" id="form-email" required>
-            </fieldset>
-            <fieldset>
-              <label>Message</label>
-              <textarea name="message" id="form-message" required ></textarea>
-            </fieldset>
+            <label>Name</label>
+            <input type="text" name="from_name" id="form-name" required>
+            <label>Email</label>
+            <input type="email" name="reply_to" id="form-email" required>
+            <label>Message</label>
+            <textarea name="message" id="form-message" required ></textarea>
+            <input type="submit" value="Send" id="submit-btn" class="btn">
+          </form>
+          <!-- <div class="g-recaptcha" data-sitekey="6LeHZCUbAAAAAH-cMpZARiqP9FzGpIqsXC1Z-7HI"></div> -->
+          <!-- <div class="g-recaptcha" data-sitekey="6LenLH0bAAAAABxPdsi88-K9snYvsHDkdB-tub--" data-size="invisible" data-callback="onSubmit"></div> -->
+          
 
-            <fieldset>
-              <input type="submit" value="Send" id="submit-btn" class="btn">
-            </fieldset>
-
-            <div class="g-recaptcha" data-sitekey="6LeHZCUbAAAAAH-cMpZARiqP9FzGpIqsXC1Z-7HI" data-theme="dark"></div>
-            <div class="recaptcha-disclaimer">This site is protected by reCAPTCHA and the Google
-              <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-              <a href="https://policies.google.com/terms">Terms of Service</a> apply.</div>
-        </form>
+          <div class="recaptcha-disclaimer">This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+            <a href="https://policies.google.com/terms">Terms of Service</a> apply.</div>
         </section>
       </blockquote>
 
